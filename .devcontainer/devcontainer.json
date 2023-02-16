@@ -5,7 +5,7 @@
 
     "customizations": {
         "vscode":{
-            "extension":"ms-python.python"
+            "extensions":["ms-python.python"]
         }
     }
 }
