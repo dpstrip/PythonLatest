@@ -1,0 +1,11 @@
+{
+    "name":"Python3 Dev Env",
+    
+    "image":"basepython",
+
+    "customizations": {
+        "vscode":{
+            "extension":"ms-python.python"
+        }
+    }
+}

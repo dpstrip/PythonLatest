@@ -1,0 +1,32 @@
+//Build base Container and name it Base Python
+docker build -t basepython .
+
+//Run the Container in interactinve mode and run a bash shell
+docker run -it --name basepythonImage basepython /bin/bash
+
+
+//I have to go in and by hand run a apt-get install idel3 command to get the python IDE installed.  There is a time zone entry that is not a yes or no
+//This is save the container as an basepythonImage with idel
+docker commit basepythonImage basepythonidel
+
+
+//Run basepython image to get teh IDE up in xlaunch
+docker run -v c:/:/DriveC/  -P  -e DISPLAY=192.168.1.6:0 -it basepythonidel idle
+
+//up load image into my repository
+//1st tag it
+docker tag basepythonidel dpstrip/python3idle
+
+//2cd login
+docker login
+
+//3rd push it to my repository
+docker push dpstrip/python3idle
+
+
+
+////Now saving base python to dpstrip repository
+docker tag basepython dpstrip/basepythonimage
+
+docker login
+docker push dpstrip/basepythonimage
