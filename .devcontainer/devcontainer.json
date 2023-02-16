@@ -1,7 +1,7 @@
 {
     "name":"Python3 Dev Env",
     
-    "image":"basepython",
+    "image":"dpstrip/basepythonimage",
 
     "customizations": {
         "vscode":{
